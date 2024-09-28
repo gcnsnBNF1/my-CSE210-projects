@@ -7,7 +7,6 @@ class Program
     {
         Console.WriteLine("Welcome to my Journal Program!");
 
-        Entry nextEntry = new Entry();
         Journal newJournal = new Journal();
         int selectionNumber = 0;
 
@@ -20,6 +19,8 @@ class Program
             {
                 if (selectionNumber == 1)
                 {
+                    Entry nextEntry = new Entry();
+
                     DateTime theDateAndTime = DateTime.Now;
                     nextEntry._date = theDateAndTime.ToShortDateString();
 

@@ -20,11 +20,11 @@ public class Journal
 
     public void SaveToFile(string file)
     {
-        using (StreamWriter outputFile = new StreamWriter(file))
+        using (StreamWriter outputFile = new StreamWriter(file, true))
         {
             foreach (Entry fileEntry in _entries)
             {
-                outputFile.WriteLine($"Date: {fileEntry._date} - Prompt: {fileEntry._promptText}\n{fileEntry._entryText}\n");
+                outputFile.WriteLine($"{fileEntry._date},\"{fileEntry._promptText}\",\"{fileEntry._entryText}\"");
             }
             
         }
@@ -36,7 +36,7 @@ public class Journal
         
         foreach (string line in lines)
         {
-            Console.WriteLine($"{line}\n");
+            Console.WriteLine(line);
         }
     }
 }
