@@ -44,8 +44,8 @@ public class ReflectingActivity : Activity
 
     private Random _random = new Random();
 
-    public ReflectingActivity(string name, string description)
-        : base(name, description)
+    public ReflectingActivity(string name, string description, int duration)
+        : base(name, description, duration)
     {
     }
 

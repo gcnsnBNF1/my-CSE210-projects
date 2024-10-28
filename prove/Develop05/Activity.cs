@@ -6,16 +6,16 @@ public class Activity
     private string _description;
     private int _duration;
 
-    public Activity(string name, string description)
+    public Activity(string name, string description, int duration)
     {
         _name = name;
         _description = description;
-        _duration = 60;
+        _duration = duration;
     }
 
     public void DisplayStartingMessage()
     {
-        Console.WriteLine($"Welcome to the {_name}.\n \n{_description}\n \nEach session lasts {_duration} seconds.\n");
+        Console.WriteLine($"Welcome to the {_name}.\n \n{_description}\n \nThis session will last {_duration} seconds\n");
         Console.Write("Press enter when your ready: ");
         Console.ReadLine();
     }

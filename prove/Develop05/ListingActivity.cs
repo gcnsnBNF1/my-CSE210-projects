@@ -27,15 +27,15 @@ public class ListingActivity : Activity
     };
     private Random _random = new Random();
 
-    public ListingActivity(string name, string description)
-        : base(name, description)
+    public ListingActivity(string name, string description, int duration)
+        : base(name, description, duration)
     {
     }
 
     public void Run()
     {
         Console.Clear();
-        Console.WriteLine("List as responses to this prompt as you can:");
+        Console.WriteLine("List as many responses to this prompt as you can:");
         Console.WriteLine($" --- {GetRandomPrompt()} --- \n");
         Console.Write("You may begin in\n");
         ShowCountDown(5);

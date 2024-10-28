@@ -22,8 +22,11 @@ class Program
                 switch (selection)
                 {
                     case 1:
+                        Console.Write("How long, in seconds, would you like this session to be? ");
+                        string durationInput1 = Console.ReadLine();
+                        int duration1 = int.Parse(durationInput1);
                         BreathingActivity breathingActivity = new BreathingActivity("Breathing Activity",
-                            "In this session, we'll calm our minds by taking deep breaths. We'll inhale for 4 seconds, hold it for 7 seconds, and exhale for 8 seconds.");
+                            "In this session, we'll calm our minds by taking deep breaths. We'll inhale for 4 seconds, hold it for 7 seconds, and exhale for 8 seconds.", duration1);
                         breathingActivity.DisplayStartingMessage();
                         Console.Write(loadingMessage);
                         breathingActivity.ShowSpinner(5);
@@ -36,8 +39,11 @@ class Program
                         break;
 
                     case 2:
+                        Console.Write("How long, in seconds, would you like this session to be? ");
+                        string durationInput2 = Console.ReadLine();
+                        int duration2 = int.Parse(durationInput2);
                         ReflectingActivity reflectingActivity = new ReflectingActivity("Reflecting Activity", 
-                            "This session will help you reflect on times when you've shown strength. Helping you recognize the power you really have and how you can apply it in the future.");
+                            "This session will help you reflect on times when you've shown strength. Helping you recognize the power you really have and how you can apply it in the future.", duration2);
                         reflectingActivity.DisplayStartingMessage();
                         Console.Write(loadingMessage);
                         reflectingActivity.ShowSpinner(5);
@@ -50,8 +56,11 @@ class Program
                         break;
 
                     case 3:
+                        Console.Write("How long, in seconds, would you like this session to be? ");
+                        string durationInput3 = Console.ReadLine();
+                        int duration3 = int.Parse(durationInput3);
                         ListingActivity listingActivity = new ListingActivity("Listing Activity", 
-                            "The session will help you realize the good things that have happened in your life by listing as much as you can in a specific category.");
+                            "The session will help you realize the good things that have happened in your life by listing as much as you can in a specific category.", duration3);
                         listingActivity.DisplayStartingMessage();
                         Console.Write(loadingMessage);
                         listingActivity.ShowSpinner(5);
